@@ -1,0 +1,1036 @@
+<div class="main" id="printArea">
+ ﻿﻿﻿﻿﻿
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+ <head>
+  <link href="/tps/styles/text.css" rel="stylesheet" type="text/css"/>
+  <link href="/tps/styles/css.css" rel="stylesheet" type="text/css"/>
+  <link href="/tps/styles/chtd_tab.css" rel="stylesheet" type="text/css"/>
+  <link href="/tps/styles/chtd.css" rel="stylesheet" type="text/css"/>
+  <style>
+   td {align: left;}
+  </style>
+ </head>
+ <script>
+  $jq(document).ready(function(){
+	popWatermark();
+});
+
+function openEditScreen(editUrl){
+    window.open(encodeURI(editUrl));
+    unblock();
+}
+
+function popWatermark(){
+	        var msgTop = 50;
+	        var msgLeft = 500;
+	        
+	        try{
+	        	msgTop = $jq("#printArea").position().top+50;
+	        	msgLeft = $jq("#printArea").position().left +$jq("#printArea").width()/2 +50;
+			}catch(e) {}
+			
+			$jq("#hidden_message_id")
+	        .css({
+	            fontSize: "100px", //watermark font size 
+	            color: "brown", //watermark color 
+	            fontWeight: "bolder", //watermark font weight 
+	            fontFamily: "verdana", //watermark font family 
+	            position: "absolute", //watermark position 必須為 "absolute" 
+	            width: "100px", //watermark div width 
+	            top: msgTop, //watermark position top 
+	            left: msgLeft //watermark position left 
+	        })
+	        .fadeTo("fast",0.3); //watermark 透明度 
+}
+
+function popWatermark2(){
+	        var msgTop = 200;
+	        var msgLeft = 500;
+			$jq("#hidden_message_id")
+	        .css({
+	            fontSize: "120px", //watermark font size 
+	            color: "brown", //watermark color 
+	            fontWeight: "bolder", //watermark font weight 
+	            fontFamily: "verdana", //watermark font family 
+	            position: "absolute", //watermark position 必須為 "absolute" 
+	            width: "120px", //watermark div width 
+	            top: msgTop, //watermark position top 
+	            left: msgLeft //watermark position left 
+	        })
+	        .fadeTo("fast",0.3); //watermark 透明度 
+}
+
+//共同供應契約顯示得標廠商清單
+function printBidder(pkItem){
+		//alert(pkItem);
+		
+		    var popupWindow = window.open('/tps/main/pms/tps/atm/atmAwardAction.do?method=qryCppObtain&pkAtmMain=51239692&pkAtmAwardItem='+pkItem+'&tenderCaseNo=103009','showBidder','status=yes,toolbar=no,menubar=no,location=no,resizable=yes,scrollbars=yes,width=750,height=500',true);				
+		
+}
+ </script>
+ <table border="1" cellpadding="0" cellspacing="0" class="table_block tender_table" width="100%">
+  <caption style="display:none">
+   <center>
+    <font size="5">
+     決標公告
+    </font>
+   </center>
+   <div align="center" id="printAwardDate" style="display:block">
+    公告日:103/04/29
+   </div>
+  </caption>
+  <tbody>
+   <tr>
+    <td align="center" colspan="4" style="border:1px solid #FFFFFF;">
+     <center>
+      <h1>
+       決標公告
+      </h1>
+     </center>
+     <div align="center" id="printAwardDate" style="display:block">
+      <h3>
+       公告日:103/04/29
+      </h3>
+     </div>
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <!-- delimiter 機關資料 Start -->
+   <tr class="award_table_tr_1">
+    <td align="center" bgcolor="#89C0C7" class="style1" rowspan="8" valign="middle" width="38">
+     <span class="newstop">
+      機
+      <br/>
+      關
+      <br/>
+      資
+      <br/>
+      料
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     機關代碼
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     3.95.77
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     機關名稱
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     臺南市安定區公所
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     單位名稱
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     臺南市安定區公所
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     機關地址
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     745臺南市安定區安定里59號
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     聯絡人
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     李俊毅
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" valign="middle" width="200">
+     聯絡電話
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     (06)5921116 分機 272
+    </td>
+   </tr>
+   <tr class="award_table_tr_1">
+    <th align="left" bgcolor="#DAEBED" class="T11b" style="height: 25px" valign="middle" width="200">
+     傳真號碼
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop" height="25">
+     (06)5922955
+    </td>
+   </tr>
+   <!-- delimiter 機關資料 End -->
+   <!-- delimiter 已公告/採購資料 Start -->
+   <tr class="award_table_tr_2">
+    <td align="center" bgcolor="#FCD847" class="form_head" rowspan="25 " valign="middle" width="38">
+     <span class="newstop">
+      已
+      <br/>
+      公
+      <br/>
+      告
+      <br/>
+      資
+      <br/>
+      料
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     標案案號
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     103009
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     招標方式
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     公開取得報價單或企劃書
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     決標方式
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     參考最有利標精神
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     新增公告傳輸次數
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     01
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     標案名稱
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     安定區103年度本所預算暨補助經費委託設計監造(開口契約)-第2期
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     決標資料類別
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     決標公告
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否屬共同供應契約採購
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否複數決標
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     標的分類
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     &lt;勞務類&gt;    
+                            8672
+                            工程服務
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否屬統包
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否應依公共工程專業技師簽證規則實施技師簽證
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     開標時間
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     103/04/28 10:10
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     原公告日期
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     103/04/16
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     採購金額級距
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     未達公告金額
+     <div class="remind_msg">
+     </div>
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     辦理方式
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     自辦
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     預算金額是否公開
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     預算金額
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     323,400元
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否受機關補助
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     履約地點
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     臺南市(非原住民地區)
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     履約地點（含地區）
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     臺南市－安定區
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否屬優先採購身心障礙福利機構產品或勞務
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     是否含特別預算
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     歸屬計畫類別
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     非屬愛台十二項計畫
+    </td>
+   </tr>
+   <tr class="award_table_tr_2">
+    <th align="left" bgcolor="#FFFF99" class="T11b" valign="middle" width="200">
+     本案採購契約是否採用主管機關訂定之範本
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <!-- 不公開於廠商端/民眾端及政府採購公報 -->
+   <!-- delimiter 已公告/採購資料 End -->
+   <!-- delimiter 資訊服務價格 Start -->
+   <!-- delimiter 資訊服務價格 End -->
+   <!-- delimiter 投標廠商 Start -->
+   <tr class="award_table_tr_3">
+    <td align="center" bgcolor="#F5BF65" rowspan="2" valign="middle" width="38">
+     <span class="newstop">
+      投
+      <br/>
+      標
+      <br/>
+      廠
+      <br/>
+      商
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_3">
+    <td colspan="3" style="padding-top:0px; padding-bottom:0px; padding-right:0px; padding-left:0px;">
+     <table bgcolor="#F5BF65" border="1" bordercolor="#F5BF65" cellpadding="1" cellspacing="1" class="table_block tender_table" height="100%" style="border-collapse:collapse;" summary="*" width="100%">
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商家數
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        2
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        53265471
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        榮承發工程顧問股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商業別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        技術顧問公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商地址
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        407臺中市西屯區大弘街82號1樓
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商電話
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        (06)
+			
+			
+				6850979
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        126,126元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        得標廠商國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        中華民國(Republic of China (Taiwan))
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否為中小企業
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        履約起迄日期
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        103/05/08－103/12/31
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        雇用員工總人數是否
+        <br>
+         超過100人
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        否
+       </td>
+      </tr>
+      <!-- isEmployeeOver100 -->
+      <!-- isObtain -->
+      <!-- isNotObtain end -->
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        投標廠商2
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商代碼
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        79974821
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        新光工程顧問有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否得標
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        組織型態
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        公司登記
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商業別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="7">
+        技術顧問公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商地址
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        600嘉義市東區市宅街34之2號1樓
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        廠商電話
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        (06)
+			
+			
+				6563188
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        84,084元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        得標廠商國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        中華民國(Republic of China (Taiwan))
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        是否為中小企業
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        是
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        履約起迄日期
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        103/05/08－103/12/31
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#ffdd83" class="T11b" valign="middle" width="200">
+        雇用員工總人數是否
+        <br>
+         超過100人
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop" height="25">
+        否
+       </td>
+      </tr>
+      <!-- isEmployeeOver100 -->
+      <!-- isObtain -->
+      <!-- isNotObtain end -->
+     </table>
+    </td>
+   </tr>
+   <!-- delimiter 投標廠商 End -->
+   <!-- delimiter 簽約廠商 Start -->
+   <!-- delimiter 簽約廠商 End -->
+   <!-- delimiter 決標品項 Start -->
+   <tr class="award_table_tr_4">
+    <td align="center" bgcolor="#FF9999" rowspan="2" valign="middle" width="38">
+     <span class="newstop">
+      決
+      <br/>
+      標
+      <br/>
+      品
+      <br/>
+      項
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_4">
+    <td colspan="3" style="padding-top:0px; padding-bottom:0px; padding-right:0px; padding-left:0px;">
+     <table bgcolor="#FF9999" border="1" bordercolor="#FF9999" cellpadding="1" cellspacing="1" class="table_block tender_table" height="100%" style="border-collapse:collapse;" summary="*" width="100%">
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標品項數
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        2
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第1品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        安定區103年度本所預算暨補助經費委託設計監造第2期序位一
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        式
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        否
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        榮承發工程顧問股份有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        126,126
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        126,126
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           中華民國(Republic of China (Taiwan))
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           126,126元
+           <br/>
+           壹
+           <span style="color:red">
+            拾
+           </span>
+           貳萬陸仟壹佰貳拾陸元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        第2品項
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        品項名稱
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        安定區103年度本所預算暨補助經費委託設計監造第2期序位二
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        單位
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        式
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        是否以單價及預估需
+        <br>
+         求數量之乘積決定最
+         <br>
+          低標
+         </br>
+        </br>
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        否
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商1
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        得標廠商
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        新光工程顧問有限公司
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        預估需求數量
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        1
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        決標金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        84,084
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        底價金額
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        84,084
+			元
+       </td>
+      </tr>
+      <tr>
+       <th align="left" bgcolor="#FFCCCC" class="T11b" valign="middle" width="200">
+        原產地國別
+       </th>
+       <td bgcolor="#EFF1F1" class="newstop">
+        <table border="0" cellpadding="0" cellspacing="1" class="shift" id="table_ob_nation">
+         <tr>
+          <td class="newstop" width="100px">
+           原產地國別
+          </td>
+          <td class="newstop">
+           阿富汗 (Afghanistan)
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" valign="top">
+           原產地國別
+           <br/>
+           得標金額
+          </td>
+          <td class="newstop">
+           84,084元
+           <br/>
+           捌
+           <span style="color:red">
+            萬
+           </span>
+           肆仟零捌拾肆元
+          </td>
+         </tr>
+         <tr>
+          <td class="newstop" colspan="2">
+           <hr/>
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+   <!-- delimiter 決標品項 End -->
+   <!-- delimiter 最有利標 Start -->
+   <!-- delimiter 最有利標 End -->
+   <!-- delimiter 英文公告 Start -->
+   <!-- delimiter 英文公告 End -->
+   <!-- delimiter 決標資料 Start -->
+   <tr class="award_table_tr_6">
+    <td align="center" bgcolor="#c79961" class="form_head" rowspan="14" valign="middle" width="38">
+     <span class="newstop">
+      決
+      <br/>
+      標
+      <br/>
+      資
+      <br/>
+      料
+     </span>
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     決標公告序號
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     001
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     決標日期
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     103/04/28
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     決標公告日期
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     103/04/29
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     執行現況
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     全案已決標
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     是否刊登公報
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     底價金額
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     210,210元
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     底價金額是否公開
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     總決標金額
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     210,210元
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     總決標金額是否公開
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     是
+    </td>
+   </tr>
+   <!-- 最低標標案才顯示是否依採購法第58條規定採次低標或次次低標決標 -->
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     契約是否訂有依物價指數調整價金規定
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     否
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     未列物價調整規定說明
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     勞務案
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     履約執行機關
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+     機關代碼：3.95.77
+     <br>
+      機關名稱：臺南市安定區公所
+     </br>
+    </td>
+   </tr>
+   <tr class="award_table_tr_6">
+    <th bgcolor="#ddc09e" class="T11b" width="200">
+     附加說明
+    </th>
+    <td bgcolor="#EFF1F1" class="newstop">
+    </td>
+   </tr>
+   <!-- delimiter 決標資料 End -->
+   <!-- delimiter 撤銷公告 Start -->
+   <!-- delimiter 撤銷公告 End -->
+  </tbody>
+ </table>
+</div>

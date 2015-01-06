@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+      <div class='row'>
+        <div class='col-md-6 pull-right' style='text-align:center;'>
+        <i class="fa fa-share-alt fa-5x"></i>
+          <h1>邀請朋友 &amp; </br>   獲得大獎</h1>
+          <p>透過 Email, Facebook 分享你的連結至 showmethemoney.com</p>
+          <div class='well' style='background-color:white;'>{{ ref_url }}</div>
+          Share<br/>
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ ref_url }}">
+		<i class="fa fa-facebook-square fa-4x" style="color:#3b5998"></i>
+</a>
+<a href='https://plus.google.com/share?url={{ ref_url }}'>          
+              <i class="fa fa-google-plus-square fa-4x" style="color:#D34836"></i>
+</a>
+        </div>
+        <div class='col-md-6 pull-left'>
+          <img src="{% static 'img/iphone.jpg' %}" class='img-responsive img-rounded' />
+          </div>
+          </div>
+      </div>
+    </div>
+
+
+<div class='container' style="text-align:center;">
+Joined number is: {{ count }}<br/>
+
+
+</div>
+{% endblock %}
